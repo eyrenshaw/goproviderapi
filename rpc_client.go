@@ -47,7 +47,7 @@ func providerSearchRPC(n string) (res string, err error) {
 		nil,   // arguments
 	)
 	failOnError(err, "Failed to declare a queue")
-
+ 
 	msgs, err := ch.Consume(
 		q.Name, // queue
 		"",     // consumer

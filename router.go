@@ -5,7 +5,7 @@ import (
 
 	"github.com/gorilla/mux"
 )
-
+ 
 func DecoratedRouter() *mux.Router {
 	router := mux.NewRouter().StrictSlash(true)
 	for _, route := range routes {

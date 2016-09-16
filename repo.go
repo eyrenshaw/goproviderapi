@@ -11,7 +11,7 @@ func init() {
 	RepoCreateProvider(Provider{Name: "Write presentation"})
 	RepoCreateProvider(Provider{Name: "Host meetup"})
 }
-
+ 
 func RepoFindProvider(id int) Provider {
 	for _, t := range providers {
 		if t.Id == id {
