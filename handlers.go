@@ -29,7 +29,7 @@ func ProviderShow(w http.ResponseWriter, r *http.Request) {
 	providerId := vars["providerId"]
 
 	// send to queue.
-	SendMessage("Test", "Hello world")
+	SendMessage("Test", providerId)
 	//res, err := providerSearchRPC(providerId)
 	//failOnError(err, "Failed to handle RPC request")
 
