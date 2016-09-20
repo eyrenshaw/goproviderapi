@@ -30,7 +30,7 @@ func randInt(min int, max int) int {
 }
 
 func providerSearchRPC(n string) (res string, err error) {
-	conn, err := amqp.Dial("amqp://guest:guest@localhost:5672/")
+	conn, err := amqp.Dial("amqp://erictest:premeraZ4bus@40.118.162.227/")
 	failOnError(err, "Failed to connect to RabbitMQ")
 	defer conn.Close()
 
@@ -47,7 +47,7 @@ func providerSearchRPC(n string) (res string, err error) {
 		nil,   // arguments
 	)
 	failOnError(err, "Failed to declare a queue")
- 
+
 	msgs, err := ch.Consume(
 		q.Name, // queue
 		"",     // consumer
