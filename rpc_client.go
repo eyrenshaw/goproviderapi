@@ -30,7 +30,9 @@ func randInt(min int, max int) int {
 }
 
 func providerSearchRPC(n string) (res string, err error) {
-	conn, err := amqp.Dial("amqp://erictest:premeraZ4bus@40.118.162.227/")
+	//conn, err := amqp.Dial("amqp://erictest:premeraZ4bus@40.118.162.227/")
+	conn, err := amqp.Dial("amqp://erictest:premeraZ4bus@10.0.0.6")
+
 	failOnError(err, "Failed to connect to RabbitMQ")
 	defer conn.Close()
 
